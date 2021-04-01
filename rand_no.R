@@ -2,4 +2,5 @@
 
 x <- rnorm(500)
 
-hist(x)
+# Add a title
+hist(x, main="Histogram of 500 random numbers")
