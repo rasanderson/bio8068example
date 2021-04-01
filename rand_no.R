@@ -1,6 +1,10 @@
 # Simple histogram
+library(ggplot2)
 
-x <- rnorm(500)
+x <- data.frame(rnorm(500))
+colnames(x) <- "rand_nos"
 
 # Add a title
-hist(x, main="Histogram of 500 random numbers")
+ggplot(x, aes(rand_nos)) +
+  geom_histogram() +
+  xlab("Some random numbers")
